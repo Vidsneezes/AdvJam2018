@@ -8,10 +8,15 @@ public class PlayerSpawner : MonoBehaviour {
 
     private void Awake()
     {
-        PlayerController pc = GameObject.Instantiate(playerPrefab, transform.position, Quaternion.identity);
-        DontDestroyOnLoad(pc);
-        GameObject.Destroy(gameObject);
-        
+        OneShotInteraction oneShotI = GetComponent<OneShotInteraction>();
+
+        if (!oneShotI.HasBeenFired())
+        {
+            PlayerController pc = GameObject.Instantiate(playerPrefab, transform.position, Quaternion.identity);
+            DontDestroyOnLoad(pc);
+            GameObject.Destroy(gameObject);
+        }
+        oneShotI.SetFireOff();
     }
 
     // Use this for initialization

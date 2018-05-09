@@ -37,10 +37,7 @@ public class CameraFollow : MonoBehaviour {
 
         currentPosition.y = Mathf.SmoothDamp(currentPosition.y, targetPos.y, ref verVel, verVel, verVel, Time.deltaTime);
 
-        if (currentPosition.x > 45)
-        {
-            currentPosition.x = 45;
-        }else if(currentPosition.x < 15)
+        if(currentPosition.x < 15)
         {
             currentPosition.x = 15;
         }

@@ -13,10 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   variables:
   - globalId: pizzaforlady
-    state: 1
+    state: 0
     numberData: 0
   - globalId: 10bucks
     state: 0
     numberData: 0
+  - globalId: stickynoteboss
+    state: 0
+    numberData: 0
   keyItemChangeEvents:
   - {fileID: 11400000, guid: b30b3aea878a9ae469cda122235ab54e, type: 2}
+  - {fileID: 11400000, guid: 42f6212aef35a0649b2977a0551809da, type: 2}

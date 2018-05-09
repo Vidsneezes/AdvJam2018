@@ -8,13 +8,9 @@ public class InteractBase : MonoBehaviour, Interactable {
     public UnityEvent onInteractEnter;
     public UnityEvent onInteractActived;
     public UnityEvent onInteractExit;
-    public bool OneShot;
-
-    private bool hasFired;
 
     void Awake()
     {
-        hasFired = false;
     }
 
     public void OnInteractionEnter()
@@ -39,17 +35,10 @@ public class InteractBase : MonoBehaviour, Interactable {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (VirtualController.virtualController.wasInteractionPressed)
-        {
-            if (!OneShot || (OneShot && !hasFired))
-            {
-                OnInteractionActivated();
-                hasFired = true;
-            }
-        }
+        OnInteractionActivated();
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         OnInteractionExit();
     }

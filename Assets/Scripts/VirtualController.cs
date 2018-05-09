@@ -73,4 +73,9 @@ public class VirtualController : MonoBehaviour {
     {
         interactionRecharge = 0;
     }
+
+    public bool CanInteract()
+    {
+        return interactionRecharge > 0.3f;
+    }
 }
