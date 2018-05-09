@@ -72,8 +72,8 @@ public class PlayerController : MonoBehaviour {
 
     private void GroundCheck(Vector2 newPosition)
     {
-        RaycastHit2D rightSideCheck = Physics2D.Raycast(newPosition + Vector2.right * boxCollider2d.size.x * 0.5f, Vector2.down, Mathf.Abs(velocity.y) * Time.deltaTime, groundMask);
-        RaycastHit2D leftSideCheck = Physics2D.Raycast(newPosition + Vector2.left * boxCollider2d.size.x * 0.5f, Vector2.down, Mathf.Abs(velocity.y) * Time.deltaTime, groundMask);
+        RaycastHit2D rightSideCheck = Physics2D.Raycast(newPosition + Vector2.right * boxCollider2d.size.x * 0.48f, Vector2.down, Mathf.Abs(velocity.y) * Time.deltaTime, groundMask);
+        RaycastHit2D leftSideCheck = Physics2D.Raycast(newPosition + Vector2.left * boxCollider2d.size.x * 0.48f, Vector2.down, Mathf.Abs(velocity.y) * Time.deltaTime, groundMask);
         RaycastHit2D centerCheck = Physics2D.Raycast(newPosition, Vector2.down, Mathf.Abs(velocity.y) * Time.deltaTime, groundMask);
 
         if(rightSideCheck.collider == null && leftSideCheck.collider == null && centerCheck.collider == null)

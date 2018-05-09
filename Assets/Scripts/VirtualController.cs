@@ -42,7 +42,7 @@ public class VirtualController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (interactionRecharge > 0.5f)
+        if (interactionRecharge > 0.3f)
         {
             interactionRecharge = 0.6f;
             wasInteractionPressed = Input.GetKeyDown(KeyCode.I);
