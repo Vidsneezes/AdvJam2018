@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorName: Oldman
   actorResponses:
-  - keyItemName: PizzaForLady
+  - keyItemName: pizzaforlady
     response:
     - Thank you for the pizza, here is 10 bucks bye!
-    callEvent: 
+    callEvent: l_pizza_g_10bucks
   defaultResponse:
     keyItemName: 
     response:

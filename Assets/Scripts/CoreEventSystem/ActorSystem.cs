@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ActorSystem : MonoBehaviour {
 
@@ -45,7 +46,11 @@ public class ActorSystem : MonoBehaviour {
             VirtualController.virtualController.inInteraction = false;
             manageBase.dialogueBoxManager.CloseDialog();
             currentResponse = 0;
-            manageBase.globalKeyItems.UseUpItem(actorResponseSheet.actorResponses[responseId].keyItemName);
+            if(!actorResponseSheet.actorResponses[responseId].callEvent.Equals("nothing"))
+            {
+                manageBase.globalKeyItems.RunChangeEvent(actorResponseSheet.actorResponses[responseId].callEvent);
+            }
+
             return;
         }
 
@@ -63,6 +68,7 @@ public class ActorSystem : MonoBehaviour {
             VirtualController.virtualController.inInteraction = false;
             manageBase.dialogueBoxManager.CloseDialog();
             currentResponse = 0;
+
             return;
         }
 

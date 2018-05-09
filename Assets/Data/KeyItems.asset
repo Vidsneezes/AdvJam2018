@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Name: KeyItems
   m_EditorClassIdentifier: 
   variables:
-  - globalId: PizzaForLady
+  - globalId: pizzaforlady
+    state: 1
+    numberData: 0
+  - globalId: 10bucks
     state: 0
     numberData: 0
+  keyItemChangeEvents:
+  - {fileID: 11400000, guid: b30b3aea878a9ae469cda122235ab54e, type: 2}
