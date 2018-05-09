@@ -18,4 +18,7 @@ MonoBehaviour:
   - keyItemToChange: 10bucks
     newState: 1
     newNumberData: 0
+  - keyItemToChange: stickynoteboss
+    newState: 2
+    newNumberData: 0
   globalVariableList: {fileID: 11400000, guid: dd02b5c80264ea949b507287cafffeb7, type: 2}
