@@ -264,10 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1275457279ea67b42960954d88540939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actorName: Old man
-  actorResponse:
-  - Hello
-  - Hi how are you
+  actorResponseSheet: {fileID: 11400000, guid: 33f3ca50d0f55114ebfb68f272ae9396, type: 2}
 --- !u!1 &66238316
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +298,7 @@ MonoBehaviour:
   wasSpacePressed: 0
   wasInteractionPressed: 0
   inInteraction: 0
+  interactionRecharge: 0
 --- !u!114 &66238318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,7 +1038,7 @@ GameObject:
   m_Layer: 0
   m_Name: '###PLAYERSPAWNPOINT###'
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

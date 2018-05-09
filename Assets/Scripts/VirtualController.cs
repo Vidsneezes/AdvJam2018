@@ -49,8 +49,10 @@ public class VirtualController : MonoBehaviour {
         }
         else
         {
+            wasInteractionPressed = false;
             interactionRecharge += Time.deltaTime;
         }
+
         if (!inInteraction)
         {
             isRightPressed = Input.GetKey(KeyCode.D);
@@ -67,7 +69,7 @@ public class VirtualController : MonoBehaviour {
 
     }
 
-    public void BeginInteraction()
+    public void TriggerInteraction()
     {
         interactionRecharge = 0;
     }
