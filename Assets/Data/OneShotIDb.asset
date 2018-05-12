@@ -13,4 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oneShots:
   - uniqueId: bossyells
+    fired: 1
+  - uniqueId: playerspawnpoint
     fired: 0

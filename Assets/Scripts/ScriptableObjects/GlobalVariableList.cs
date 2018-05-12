@@ -8,6 +8,19 @@ public class GlobalVariableList : ScriptableObject {
 
     public List<KeyItemChangeEvent> keyItemChangeEvents;
 
+    public int GetVariableState(string keyName)
+    {
+        for (int i = 0; i < variables.Count; i++)
+        {
+            if (variables[i].globalId.Equals(keyName))
+            {
+                return variables[i].state;
+            }
+        }
+
+        return 1;
+    }
+
     public void RunChangeEvent(string kiceName)
     {
         for (int i = 0; i < keyItemChangeEvents.Count; i++)

@@ -8,6 +8,11 @@ public class PlayerSpawner : MonoBehaviour {
 
     private void Awake()
     {
+        
+    }
+
+    // Use this for initialization
+    void Start () {
         OneShotInteraction oneShotI = GetComponent<OneShotInteraction>();
 
         if (!oneShotI.HasBeenFired())
@@ -18,11 +23,6 @@ public class PlayerSpawner : MonoBehaviour {
         }
         oneShotI.SetFireOff();
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {

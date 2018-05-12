@@ -18,11 +18,14 @@ public class PlayerController : MonoBehaviour {
 
     public LayerMask groundMask;
 
+    public int inRoomTransition;
+
     private void Awake()
     {
+        inRoomTransition = 0;
         rbody2d = GetComponent<Rigidbody2D>();
         rbody2d.gravityScale = 0;
-        Application.targetFrameRate = 60;
+       // Application.targetFrameRate = 60;
     }
    
 	// Update is called once per frame

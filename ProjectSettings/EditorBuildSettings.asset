@@ -6,9 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Sections/Scene_1/Locations/area_2_scene_1.unity
-    guid: 9962fa95a198e6445b881fe87566206a
+    path: Assets/Scenes/CoreScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Sections/Scene_1/Locations/area_3_scene_1.unity
-    guid: e238321d30f844f4585d14ebc870d3d8
+    path: Assets/GameData/Chapters/Chapter_1/Act_1/Locations/location_1_act_1.unity
+    guid: 1264406033c2c26439a5d3f3ef6f12e8
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_1/Locations/location_2_act_1.unity
+    guid: 9ca70943786af3e4296931f106a19466
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_1/Locations/location_3_act_1.unity
+    guid: e59c99f292f95a84f821c6c2302dc27b
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_2/Locations/location_1_act_2.unity
+    guid: 1831cb8ab2cdf704b811a3525696f294
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_2/Locations/location_2_act_2.unity
+    guid: 90b46b48b96db3a43b313f096be1c4c2
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_2/Locations/location_3_act_2.unity
+    guid: d170ccf90ad4ee74bb6e6a7f5e114f5b
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_3/Locations/location_boss_act_3.unity
+    guid: fb19d8cd8747ea04193e957e01e65aee
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_3/Locations/location_manor_act_3.unity
+    guid: a434166ddca57af40a998cf57fa7fb22
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_4/Locations/location_1_act_4.unity
+    guid: 2dbef5f035987bf45a1be97d9b8cf14a
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_4/Locations/location_2_act_4.unity
+    guid: 92852b439f48efe46becbcae2ef79708
+  - enabled: 1
+    path: Assets/GameData/Chapters/Chapter_1/Act_4/Locations/location_3_act_4.unity
+    guid: 84f7d43224fe85540bfd8c6362d868f6
   m_configObjects: {}
