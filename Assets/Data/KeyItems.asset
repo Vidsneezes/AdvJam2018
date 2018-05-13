@@ -22,7 +22,7 @@ MonoBehaviour:
     state: 0
     numberData: 0
   - globalId: act
-    state: 2
+    state: 1
     numberData: 0
   keyItemChangeEvents:
   - {fileID: 11400000, guid: b30b3aea878a9ae469cda122235ab54e, type: 2}

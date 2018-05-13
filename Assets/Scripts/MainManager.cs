@@ -9,4 +9,10 @@ public class MainManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("CoreScene");
+
+    }
+
 }

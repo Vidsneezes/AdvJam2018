@@ -71,6 +71,14 @@ public class PlayerController : MonoBehaviour {
         }
 
         mainAnimator.SetBool("onground", onGround);
+
+        if(inRoomTransition == 1)
+        {
+            velocity.x = 1;
+        }else if(inRoomTransition == -1)
+        {
+            velocity.x = -1;
+        }
 	}
 
     private void GroundCheck(Vector2 newPosition)

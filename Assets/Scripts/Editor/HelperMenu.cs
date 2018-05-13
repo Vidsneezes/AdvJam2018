@@ -57,23 +57,26 @@ public class HelperMenu : MonoBehaviour {
             UnityEditor.SceneManagement.EditorSceneManager.CloseScene(UnityEngine.SceneManagement.SceneManager.GetSceneByName("CoreScene"), true);
         }else if(playMode == PlayModeStateChange.ExitingEditMode)
         {
-            OneShotIDb oneShotData = (OneShotIDb)AssetDatabase.LoadAssetAtPath("Assets/Data/OneShotIDb.asset", typeof(OneShotIDb));
-            for (int i = 0; i < oneShotData.oneShots.Count; i++)
-            {
-                if (oneShotData.oneShots[i].uniqueId.Equals("playerspawnpoint"))
-                {
-                    oneShotData.oneShots[i].fired = false;
-                }
-            }
-
             string currentScene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().path;
-            if (currentScene != "CoreScene")
+            if (!currentScene.Contains("StartScene"))
             {
-                UnityEditor.SceneManagement.EditorSceneManager.OpenScene("Assets/Scenes/CoreScene.unity");
-                UnityEditor.SceneManagement.EditorSceneManager.OpenScene(currentScene, UnityEditor.SceneManagement.OpenSceneMode.Additive);
+                OneShotIDb oneShotData = (OneShotIDb)AssetDatabase.LoadAssetAtPath("Assets/Data/OneShotIDb.asset", typeof(OneShotIDb));
+                for (int i = 0; i < oneShotData.oneShots.Count; i++)
+                {
+                    if (oneShotData.oneShots[i].uniqueId.Equals("playerspawnpoint"))
+                    {
+                        oneShotData.oneShots[i].fired = false;
+                    }
+                }
+
+                if (currentScene != "CoreScene")
+                {
+                    UnityEditor.SceneManagement.EditorSceneManager.OpenScene("Assets/Scenes/CoreScene.unity");
+                    UnityEditor.SceneManagement.EditorSceneManager.OpenScene(currentScene, UnityEditor.SceneManagement.OpenSceneMode.Additive);
+                }
+                EditorApplication.isPlaying = true;
+                AddPlayerSpawnPoint();
             }
-            EditorApplication.isPlaying = true;
-            AddPlayerSpawnPoint();
           //  AddGameLogicObjects();
         }
     }

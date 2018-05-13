@@ -31,7 +31,7 @@ public class CameraFollow : MonoBehaviour {
         myCamera = GetComponent<Camera>();
         horVel = 0;
         verVel = 0;
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        
     }
 	
 	// Update is called once per frame
@@ -41,6 +41,16 @@ public class CameraFollow : MonoBehaviour {
 
     private void LateUpdate()
     {
+        if(target == null)
+        {
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            if(playerObject != null)
+            {
+                target = playerObject.transform;
+                transform.position = target.position + Vector3.forward * -10;
+            }
+        }
+
         if(locationMeta == null)
         {
             locationMeta = GameObject.FindObjectOfType<LocationMeta>();
