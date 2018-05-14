@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
     public LayerMask groundMask;
 
     public int inRoomTransition;
+    private float smoothVel;
 
     private void Awake()
     {
@@ -104,12 +105,11 @@ public class PlayerController : MonoBehaviour {
         velocity.y -= gravity * Time.deltaTime;
 
         velocity.y = Mathf.Clamp(velocity.y, -maxVelocity.y, maxVelocity.y*30);
-       
         Vector2 finalVelocity = velocity;
         finalVelocity.x *= speed;
-
-       
-        rbody2d.MovePosition(newPosition + finalVelocity * Time.deltaTime);
+        newPosition.x = Mathf.SmoothDamp(rbody2d.position.x, newPosition.x + finalVelocity.x * Time.deltaTime, ref smoothVel, 0.16f);
+        newPosition.y = newPosition.y + finalVelocity.y * Time.deltaTime;
+        rbody2d.MovePosition(newPosition);
 
         GroundCheck(rbody2d.position);
     }

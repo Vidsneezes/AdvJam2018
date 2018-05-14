@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: boker_d_1
   m_EditorClassIdentifier: 
-  actorName: Boss
-  actorResponses: []
-  defaultResponse:
-    keyItemName: 
-    response:
-    - GET TA WERK!
-    callEvent: 
+  actorName: Borker
+  actorItemResponses: []
+  defaultResponses:
+  - response:
+    - Well met
+    globalConditions: []
+    callEvent: {fileID: 0}

@@ -14,15 +14,9 @@ public class HelperMenu : MonoBehaviour {
         }
 
 
-        OneShotIDb oneShotData = (OneShotIDb)AssetDatabase.LoadAssetAtPath("Assets/Data/OneShotIDb.asset", typeof(OneShotIDb));
-        for (int i = 0; i < oneShotData.oneShots.Count; i++)
-        {
-            if (oneShotData.oneShots[i].uniqueId.Equals("playerspawnpoint"))
-            {
-                oneShotData.oneShots[i].fired = false;
-            }
-        }
-
+        GlobalVariableList globalsList = (GlobalVariableList)AssetDatabase.LoadAssetAtPath("Assets/Data/GlobalVariables.asset", typeof(GlobalVariableList));
+        globalsList.SetGlobalVariable("playerspawnpoint", 0, 0);
+      
         string currentScene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name;
         Debug.Log("load");
         if (currentScene != "CoreScene")
@@ -43,7 +37,7 @@ public class HelperMenu : MonoBehaviour {
         LocationMeta lm = GameObject.FindObjectOfType<LocationMeta>();
         if(lm != null)
         {
-            lm.globals = (GlobalVariableList)AssetDatabase.LoadAssetAtPath("Assets/Data/KeyItems.asset", typeof(GlobalVariableList));
+            lm.globals = (GlobalVariableList)AssetDatabase.LoadAssetAtPath("Assets/Data/GlobalVariables.asset", typeof(GlobalVariableList));
             UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene());
             UnityEditor.SceneManagement.EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
         }
@@ -60,14 +54,8 @@ public class HelperMenu : MonoBehaviour {
             string currentScene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().path;
             if (!currentScene.Contains("StartScene"))
             {
-                OneShotIDb oneShotData = (OneShotIDb)AssetDatabase.LoadAssetAtPath("Assets/Data/OneShotIDb.asset", typeof(OneShotIDb));
-                for (int i = 0; i < oneShotData.oneShots.Count; i++)
-                {
-                    if (oneShotData.oneShots[i].uniqueId.Equals("playerspawnpoint"))
-                    {
-                        oneShotData.oneShots[i].fired = false;
-                    }
-                }
+                GlobalVariableList globalsList = (GlobalVariableList)AssetDatabase.LoadAssetAtPath("Assets/Data/GlobalVariables.asset", typeof(GlobalVariableList));
+                globalsList.SetGlobalVariable("playerspawnpoint", 0, 0);
 
                 if (currentScene != "CoreScene")
                 {

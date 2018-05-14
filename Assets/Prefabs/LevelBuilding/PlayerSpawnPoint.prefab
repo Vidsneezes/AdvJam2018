@@ -80,4 +80,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: playerspawnpoint
+  desiredValueState: 2
   managerBase: {fileID: 0}

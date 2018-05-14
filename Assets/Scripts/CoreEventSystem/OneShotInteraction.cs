@@ -5,13 +5,16 @@ using UnityEngine;
 public class OneShotInteraction : MonoBehaviour {
 
     public string uniqueId;
+    public int desiredValueState;
 
     public ManagerBase managerBase;
 
     private void Start()
     {
+
         managerBase = GameObject.FindObjectOfType<ManagerBase>();
-        if(managerBase.oneShotIDb.HasBeenFired(uniqueId))
+        int currentValue = managerBase.globalKeyItems.GetVariableState(uniqueId);
+        if(currentValue == desiredValueState)
         {
             GameObject.Destroy(gameObject);
         }
@@ -19,12 +22,13 @@ public class OneShotInteraction : MonoBehaviour {
 	
     public void SetFireOff()
     {
-        managerBase.oneShotIDb.FireOff(uniqueId);
+        managerBase.globalKeyItems.SetGlobalVariable(uniqueId, desiredValueState, 0);
     }
 
     public bool HasBeenFired()
     {
-        if (managerBase.oneShotIDb.HasBeenFired(uniqueId))
+        int currentValue = managerBase.globalKeyItems.GetVariableState(uniqueId);
+        if (currentValue == desiredValueState)
         {
             return true;
         }

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: boss_d_4
   m_EditorClassIdentifier: 
   actorName: Boss
-  actorResponses: []
-  defaultResponse:
-    keyItemName: 
-    response:
-    - GET TA WERK!
-    callEvent: 
+  actorItemResponses: []
+  defaultResponses:
+  - response:
+    - What ya think this is? a merry go round, deliver pizza and bring the moni back
+      two things TWO THINGS!
+    globalConditions: []
+    callEvent: {fileID: 0}

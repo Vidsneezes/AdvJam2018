@@ -427,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitWidth: 45
   unitHeight: 34
+  locationId: 0
   mainDisplay: {fileID: 595761543}
   worldRect:
     serializedVersion: 2
@@ -434,6 +435,8 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
+  playerController: {fileID: 0}
+  globals: {fileID: 0}
 --- !u!4 &604294134
 Transform:
   m_ObjectHideFlags: 0
@@ -735,6 +738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98884bc363ac97e4083766a158b90e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCondition: 0
+  globalId: 
+  desiredState: 0
   onInteractEnter:
     m_PersistentCalls:
       m_Calls:
@@ -883,6 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: bossyells
+  desiredValueState: 0
   managerBase: {fileID: 0}
 --- !u!1 &1623872397
 GameObject:

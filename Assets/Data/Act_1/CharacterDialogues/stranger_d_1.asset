@@ -9,13 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
-  m_Name: oldman_d_1
+  m_Name: stranger_d_1
   m_EditorClassIdentifier: 
-  actorName: Oldman
-  actorResponses: []
-  defaultResponse:
-    keyItemName: 
-    response:
-    - It's too darn early to be up if you ask me! Back in my day we preferred working
-      all night to getting up this darn early.
-    callEvent: 
+  actorName: Stranger
+  actorItemResponses: []
+  defaultResponses:
+  - response:
+    - The moon is swell today
+    globalConditions: []
+    callEvent: {fileID: 0}

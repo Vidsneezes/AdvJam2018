@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 44390893}
   - component: {fileID: 44390892}
   m_Layer: 0
-  m_Name: Location_1_foreground
+  m_Name: Location_3_foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1186,6 +1186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98884bc363ac97e4083766a158b90e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasCondition: 0
+  globalId: 
+  desiredState: 0
   onInteractEnter:
     m_PersistentCalls:
       m_Calls:

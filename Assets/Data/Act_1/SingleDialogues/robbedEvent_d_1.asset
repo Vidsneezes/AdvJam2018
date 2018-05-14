@@ -9,14 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
-  m_Name: bossevent_d_1_yells
+  m_Name: robbedEvent_d_1
   m_EditorClassIdentifier: 
-  actorName: Boss
-  actorResponses: []
-  defaultResponse:
-    keyItemName: 
-    response:
-    - Urd! Your late AGAIN!
-    - How many time has it been this week?
-    - Hurry up and deliver da pizza, here's the address, MAKE IT QUICK!
-    callEvent: g_bosssticknote
+  actorName: Stranger
+  actorItemResponses: []
+  defaultResponses:
+  - response:
+    - Give me ya money
+    globalConditions: []
+    callEvent: {fileID: 11400000, guid: 022070687d289b44aa8c0583b6b39b9e, type: 2}

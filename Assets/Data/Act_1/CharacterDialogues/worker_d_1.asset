@@ -8,11 +8,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b1bd1d8d0a131a4d9f32b39b4ecaa83, type: 3}
-  m_Name: OneShotIDb
+  m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
+  m_Name: worker_d_1
   m_EditorClassIdentifier: 
-  oneShots:
-  - uniqueId: bossyells
-    fired: 1
-  - uniqueId: playerspawnpoint
-    fired: 0
+  actorName: Worker
+  actorItemResponses: []
+  defaultResponses:
+  - response:
+    - Well met
+    globalConditions: []
+    callEvent: {fileID: 0}

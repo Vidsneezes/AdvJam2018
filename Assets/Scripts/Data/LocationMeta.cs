@@ -41,6 +41,17 @@ public class LocationMeta : MonoBehaviour {
             playerController.transform.position = newPlayrPos;
             playerController.inRoomTransition = 0;
             newPlayrPos.z = -10;
+            newPlayrPos.y = Camera.main.orthographicSize;
+            if (playerController.inRoomTransition == -1)
+            {
+                newPlayrPos.x = worldRect.x + worldRect.width + cameraFollow.cameraBounds.x;
+
+            }
+            else if (playerController.inRoomTransition == 1)
+            {
+                newPlayrPos.x = worldRect.x + 0.5f - cameraFollow.cameraBounds.x;
+            }
+
             cameraFollow.transform.position = newPlayrPos;
         }
 

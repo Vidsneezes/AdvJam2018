@@ -5,27 +5,65 @@ using UnityEngine.Events;
 
 public class InteractBase : MonoBehaviour, Interactable {
 
+    public bool hasCondition;
+    public string globalId;
+    public int desiredState;
+
     public UnityEvent onInteractEnter;
     public UnityEvent onInteractActived;
     public UnityEvent onInteractExit;
 
+    private ManagerBase managerBase;
     void Awake()
     {
     }
 
+    void Start()
+    {
+        managerBase = GameObject.FindObjectOfType<ManagerBase>();
+    }
+
     public void OnInteractionEnter()
     {
-        onInteractEnter.Invoke();
+        if(!hasCondition)
+        {
+            onInteractEnter.Invoke();
+
+            return;
+        }
+
+        if (hasCondition && managerBase.ConditionMeets(globalId, desiredState))
+        {
+            onInteractEnter.Invoke();
+        }
     }
 
     public void OnInteractionExit()
     {
-        onInteractExit.Invoke();
+        if (!hasCondition)
+        {
+            onInteractExit.Invoke();
+
+            return;
+        }
+        if (hasCondition && managerBase.ConditionMeets(globalId, desiredState))
+        {
+            onInteractExit.Invoke();
+        }
     }
 
     public void OnInteractionActivated()
     {
-        onInteractActived.Invoke();
+        if (!hasCondition)
+        {
+            onInteractActived.Invoke();
+
+            return;
+        }
+        if (hasCondition && managerBase.ConditionMeets(globalId, desiredState))
+        {
+            onInteractActived.Invoke();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -9,21 +9,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d4a64f5eabdae24c84f54684a64cced, type: 3}
-  m_Name: KeyItems
+  m_Name: GlobalVariables
   m_EditorClassIdentifier: 
   variables:
-  - globalId: pizzaforlady
-    state: 0
-    numberData: 0
-  - globalId: 10bucks
-    state: 0
-    numberData: 0
-  - globalId: stickynoteboss
-    state: 0
-    numberData: 0
   - globalId: act
     state: 1
     numberData: 0
-  keyItemChangeEvents:
-  - {fileID: 11400000, guid: b30b3aea878a9ae469cda122235ab54e, type: 2}
-  - {fileID: 11400000, guid: 42f6212aef35a0649b2977a0551809da, type: 2}
+  - globalId: got_lady_pizza
+    state: 0
+    numberData: 0
+  - globalId: playerspawnpoint
+    state: 2
+    numberData: 0
+  - globalId: delivered_pizza
+    state: 0
+    numberData: 0
+  - globalId: encountered_manor
+    state: 0
+    numberData: 0
+  - globalId: got_manor_ticket
+    state: 0
+    numberData: 0
+  - globalId: got_manor_pizza
+    state: 0
+    numberData: 0
+  - globalId: phone_code
+    state: 0
+    numberData: 0
+  - globalId: saved_town
+    state: 0
+    numberData: 0

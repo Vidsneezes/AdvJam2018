@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Name: lady_d_1
   m_EditorClassIdentifier: 
   actorName: Lady
-  actorResponses:
-  - keyItemName: pizzaforlady
-    response:
-    - Thank you for the pizza, here is 10 bucks bye!
-    callEvent: l_pizza_g_10bucks
-  defaultResponse:
-    keyItemName: 
-    response:
-    - What is it that you want?
-    callEvent: 
+  actorItemResponses: []
+  defaultResponses:
+  - response:
+    - You got my pizza how wonderfull
+    globalConditions:
+    - globalId: got_lady_pizza
+      state: 2
+      numberData: 0
+    callEvent: {fileID: 11400000, guid: 78362b2ce05c95f439eee441d3b8cee5, type: 2}
+  - response:
+    - What do you want?
+    globalConditions: []
+    callEvent: {fileID: 0}

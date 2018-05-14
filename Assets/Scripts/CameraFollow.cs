@@ -8,6 +8,8 @@ public class CameraFollow : MonoBehaviour {
     public float horSpeed;
     public float verSpeed;
 
+    public float smoothDamp;
+
     public LocationMeta locationMeta;
     
     private float horVel;
@@ -15,7 +17,7 @@ public class CameraFollow : MonoBehaviour {
 
     private Camera myCamera;
 
-    private Vector2 cameraBounds
+    public Vector2 cameraBounds
     {
         get
         {
@@ -25,8 +27,11 @@ public class CameraFollow : MonoBehaviour {
         }
     }
 
+    private Vector3 vel;
+
 	// Use this for initialization
 	void Start () {
+        vel = new Vector3();
         locationMeta = GameObject.FindObjectOfType<LocationMeta>();
         myCamera = GetComponent<Camera>();
         horVel = 0;
@@ -77,12 +82,12 @@ public class CameraFollow : MonoBehaviour {
             currentPosition.x = locationMeta.worldRect.x + locationMeta.worldRect.width - cameraBounds.x * 0.5f;
         }
 
-        if(currentPosition.y < 8.4375f)
+        if(currentPosition.y < myCamera.orthographicSize)
         {
-            currentPosition.y = 8.4375f;
+            currentPosition.y = myCamera.orthographicSize;
         }
 
-        transform.position = currentPosition;
+        transform.position = Vector3.SmoothDamp(transform.position, currentPosition, ref vel, smoothDamp);
         
     }
 }

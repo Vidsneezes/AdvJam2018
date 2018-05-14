@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBoxManager: {fileID: 1396397797}
   globalKeyItems: {fileID: 11400000, guid: dd02b5c80264ea949b507287cafffeb7, type: 2}
-  oneShotIDb: {fileID: 11400000, guid: 837191cc72179964cb6cc7cbe48ef2e1, type: 2}
+  currentItem: -1
 --- !u!1 &1160494469
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160494469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 8.4375, z: -10}
+  m_LocalPosition: {x: 15, y: 6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1386970152}
@@ -213,8 +213,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  horSpeed: 5
+  horSpeed: 64
   verSpeed: 16
+  smoothDamp: 0.18
   locationMeta: {fileID: 0}
 --- !u!81 &1160494472
 AudioListener:
@@ -232,7 +233,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -243,7 +244,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.4375
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

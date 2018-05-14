@@ -8,39 +8,42 @@ public class ActorSystem : MonoBehaviour {
     public ActorResponseSheet actorResponseSheet;
     public UnityEvent onDialogueDone;
     private int currentResponse;
+    private int currentBranch;
     private bool hasFocus;
 
     private void Awake()
     {
+        currentBranch = -1;
         hasFocus = false;
-        currentResponse = 0;
+        currentResponse = -1;
     }
 
     public void DecideDialogue()
     {
         ManagerBase manageBase = GameObject.FindObjectOfType<ManagerBase>();
-        bool hasItem = false;
-        int itemId = -1;
+        
 
-        ///TODO add checks to only run if player is holding the item
-        for (int i = 0; i < actorResponseSheet.actorResponses.Count; i++)
+        if(manageBase.currentItem == -1)
         {
-            if (manageBase.globalKeyItems.HasItem(actorResponseSheet.actorResponses[i].keyItemName))
+            if(currentBranch == -1)
             {
-                itemId = i;
-                hasItem = true;
-                break;
+                for (int i = 0; i < actorResponseSheet.defaultResponses.Count; i++)
+                {
+                    if(MeetsConditions(manageBase,actorResponseSheet.defaultResponses[i]))
+                    {
+                        currentBranch = i;
+                        break;
+                    }
+                }
             }
-        }
 
-        if (hasItem)
-        {
-            RunResponseDialogue(itemId, manageBase);
+            RunDefaultDialogue(manageBase);
         }
         else
         {
-            RunDefaultDialogue(manageBase);
+            RunResponseDialogue(manageBase.currentItem, manageBase);
         }
+
     }
 
     public void RunDialogue()
@@ -59,7 +62,7 @@ public class ActorSystem : MonoBehaviour {
 
     public void RunResponseDialogue(int responseId, ManagerBase manageBase)
     {
-        if (currentResponse >= actorResponseSheet.actorResponses[responseId].response.Count)
+        if (currentResponse >= actorResponseSheet.actorItemResponses[responseId].response.Count)
         {
             hasFocus = false;
 
@@ -67,15 +70,15 @@ public class ActorSystem : MonoBehaviour {
             manageBase.dialogueBoxManager.CloseDialog();
             currentResponse = 0;
             Debug.Log("close box");
-            if(!actorResponseSheet.actorResponses[responseId].callEvent.Equals("nothing"))
+            if(actorResponseSheet.actorItemResponses[responseId].callEvent != null)
             {
-                manageBase.globalKeyItems.RunChangeEvent(actorResponseSheet.actorResponses[responseId].callEvent);
+                actorResponseSheet.actorItemResponses[responseId].callEvent.RunEvent();
             }
             onDialogueDone.Invoke();
             return;
         }
 
-        manageBase.dialogueBoxManager.OpenDialog(actorResponseSheet.actorName, actorResponseSheet.actorResponses[responseId].response[currentResponse]);
+        manageBase.dialogueBoxManager.OpenDialog(actorResponseSheet.actorName, actorResponseSheet.actorItemResponses[responseId].response[currentResponse]);
         VirtualController.virtualController.inInteraction = true;
 
         currentResponse += 1;
@@ -85,25 +88,50 @@ public class ActorSystem : MonoBehaviour {
 
     public void RunDefaultDialogue(ManagerBase manageBase)
     {
-        if (currentResponse >= actorResponseSheet.defaultResponse.response.Count)
+        if (currentResponse >= actorResponseSheet.defaultResponses[currentBranch].response.Count)
         {
             hasFocus = false;
             VirtualController.virtualController.inInteraction = false;
             manageBase.dialogueBoxManager.CloseDialog();
             currentResponse = 0;
             onDialogueDone.Invoke();
-            manageBase.globalKeyItems.RunChangeEvent(actorResponseSheet.defaultResponse.callEvent);
+            if(actorResponseSheet.defaultResponses[currentBranch].callEvent != null)
+            {
+                actorResponseSheet.defaultResponses[currentBranch].callEvent.RunEvent();
+            }
             Debug.Log("close box");
-
+            currentBranch = -1;
+            currentResponse = -1;
             return;
         }
 
-        manageBase.dialogueBoxManager.OpenDialog(actorResponseSheet.actorName, actorResponseSheet.defaultResponse.response[currentResponse]);
+        manageBase.dialogueBoxManager.OpenDialog(actorResponseSheet.actorName, actorResponseSheet.defaultResponses[currentBranch].response[currentResponse]);
         VirtualController.virtualController.inInteraction = true;
 
         currentResponse += 1;
         VirtualController.virtualController.TriggerInteraction();
         hasFocus = true;
+    }
+
+    public bool MeetsConditions(ManagerBase managerBase,ActorResponseContainer actorResponseContainer)
+    {
+        if(actorResponseContainer.globalConditions.Count == 0)
+        {
+            return true;
+        }
+
+        for (int i = 0; i < actorResponseContainer.globalConditions.Count; i++)
+        {
+            int currentValue = managerBase.globalKeyItems.GetVariableState(actorResponseContainer.globalConditions[i].globalId);
+            int desiredValue = actorResponseContainer.globalConditions[i].state;
+
+            if(currentValue != desiredValue)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 

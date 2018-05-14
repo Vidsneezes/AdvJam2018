@@ -6,6 +6,11 @@ public class ManagerBase : MonoBehaviour {
 
     public DialogueBoxManager dialogueBoxManager;
     public GlobalVariableList globalKeyItems;
-    public OneShotIDb oneShotIDb;
+    public int currentItem = -1;
+
+    public bool ConditionMeets(string globalId, int desiredState)
+    {
+        return desiredState == globalKeyItems.GetVariableState(globalId);
+    }
 
 }

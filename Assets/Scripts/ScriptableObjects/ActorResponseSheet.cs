@@ -6,9 +6,10 @@ using UnityEngine;
 public class ActorResponseSheet : ScriptableObject {
 
     public string actorName; // replace this with an actor profile
-    public List<ActorResponseContainer> actorResponses;
+    public List<ActorResponseContainer> actorItemResponses;
 
-    public ActorResponseContainer defaultResponse;
+
+    public List<ActorResponseContainer> defaultResponses;
 
 
 }
@@ -16,7 +17,7 @@ public class ActorResponseSheet : ScriptableObject {
 [System.Serializable]
 public class ActorResponseContainer
 {
-    public string keyItemName;
     public List<string> response;
-    public string callEvent;
+    public List<GlobalVariableContainer> globalConditions;
+    public ChangeGlobalVarEvent callEvent;
 }
