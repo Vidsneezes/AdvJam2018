@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameData/Chapters/Chapter_1/Act_4/Locations/location_3_act_4.unity
     guid: 84f7d43224fe85540bfd8c6362d868f6
+  - enabled: 1
+    path: Assets/Scenes/endgame.unity
+    guid: d35cf2a1c1954494899ca6239f4bf4a6
   m_configObjects: {}

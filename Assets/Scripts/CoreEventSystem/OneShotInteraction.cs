@@ -11,12 +11,14 @@ public class OneShotInteraction : MonoBehaviour {
 
     private void Start()
     {
-
         managerBase = GameObject.FindObjectOfType<ManagerBase>();
-        int currentValue = managerBase.globalKeyItems.GetVariableState(uniqueId);
-        if(currentValue == desiredValueState)
+        if (managerBase != null)
         {
-            GameObject.Destroy(gameObject);
+            int currentValue = managerBase.globalKeyItems.GetVariableState(uniqueId);
+            if (currentValue == desiredValueState)
+            {
+                GameObject.Destroy(gameObject);
+            }
         }
     }
 	

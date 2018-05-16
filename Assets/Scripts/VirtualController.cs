@@ -26,6 +26,8 @@ public class VirtualController : MonoBehaviour {
     public bool inInteraction;
     public float interactionRecharge;
 
+    public UnityEngine.Events.UnityEvent onReTriggerable;
+
     private void Awake()
     {
         VirtualController.v_c = this;
@@ -51,6 +53,10 @@ public class VirtualController : MonoBehaviour {
         {
             wasInteractionPressed = false;
             interactionRecharge += Time.deltaTime;
+            if(interactionRecharge > 0.3f)
+            {
+                onReTriggerable.Invoke();
+            }
         }
 
         if (!inInteraction)

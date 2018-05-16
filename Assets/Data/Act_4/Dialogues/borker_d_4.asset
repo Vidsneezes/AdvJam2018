@@ -11,10 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: borker_d_4
   m_EditorClassIdentifier: 
-  actorName: Boss
-  actorResponses: []
-  defaultResponse:
-    keyItemName: 
-    response:
-    - GET TA WERK!
-    callEvent: 
+  defaultResponses:
+  - dialogues: {fileID: 11400000, guid: f317ed3d7c4d411428af2895f0953223, type: 2}
+    globalConditions:
+    - globalId: 4_borker
+      state: 2
+      numberData: 0
+    callEvent: {fileID: 0}
+  - dialogues: {fileID: 11400000, guid: 9759868ca4d99fe44acfefe22cf787d4, type: 2}
+    globalConditions: []
+    callEvent: {fileID: 11400000, guid: ccf945f0742890844908a8dca79dc711, type: 2}

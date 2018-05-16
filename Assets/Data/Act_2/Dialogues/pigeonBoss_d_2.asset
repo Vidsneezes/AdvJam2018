@@ -11,27 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: pigeonBoss_d_2
   m_EditorClassIdentifier: 
-  actorName: Boss
-  actorItemResponses: []
   defaultResponses:
-  - response:
-    - peee peee peeee peeee peeeee
-    globalConditions:
-    - globalId: got_manor_ticket
-      state: 2
-      numberData: 0
-    - globalId: got_manor_pizza
-      state: 2
-      numberData: 0
-    callEvent: {fileID: 0}
-  - response:
-    - pee peep pee peeeeeeeep
+  - dialogues: {fileID: 11400000, guid: fb9766d8aff49994ba4008bc268345fd, type: 2}
     globalConditions:
     - globalId: encountered_manor
       state: 2
       numberData: 0
     callEvent: {fileID: 11400000, guid: 617b6e36802c9d54883da9b8e6208b40, type: 2}
-  - response:
-    - peep peep peep peep peep
+  - dialogues: {fileID: 11400000, guid: bfcdc8b0a7a375c46b98e16d85ffe07f, type: 2}
     globalConditions: []
     callEvent: {fileID: 0}

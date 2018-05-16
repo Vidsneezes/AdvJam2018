@@ -9,36 +9,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
-  m_Name: manor_d_1
+  m_Name: manor_d_2
   m_EditorClassIdentifier: 
-  actorName: Manor
-  actorItemResponses: []
   defaultResponses:
-  - response:
-    - Pizzaaaaa delivery, I'm coming in!
+  - dialogues: {fileID: 11400000, guid: 712be9ab487f6234096d86c53b7496bc, type: 2}
     globalConditions:
     - globalId: got_manor_pizza
       state: 2
       numberData: 0
-    - globalId: got_manor_ticket
-      state: 2
-      numberData: 0
     callEvent: {fileID: 11400000, guid: 6d8614d477e1fae4386b42ebc455c22c, type: 2}
-  - response:
-    - I really should bring something else along
-    globalConditions:
-    - globalId: got_manor_ticket
-      state: 2
-      numberData: 0
-    callEvent: {fileID: 0}
-  - response:
-    - I need an excuse to go in
+  - dialogues: {fileID: 11400000, guid: fda21e8d1ded34644887dcbc879f207e, type: 2}
     globalConditions:
     - globalId: encountered_manor
       state: 2
       numberData: 0
     callEvent: {fileID: 0}
-  - response:
-    - Wow has this manor always been here?
+  - dialogues: {fileID: 11400000, guid: adbd81d6ba5194146bf2fc0e07751b7b, type: 2}
     globalConditions: []
     callEvent: {fileID: 11400000, guid: 402ce63fb087b85478f168d0a99e07ca, type: 2}

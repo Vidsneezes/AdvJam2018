@@ -6,13 +6,15 @@ using UnityEngine;
 public class GlobalVariableList : ScriptableObject {
     public List<GlobalVariableContainer> variables;
 
+    public List<GlobalVariableContainer> dynamicList;
+
     public int GetVariableState(string keyName)
     {
-        for (int i = 0; i < variables.Count; i++)
+        for (int i = 0; i < dynamicList.Count; i++)
         {
-            if (variables[i].globalId.Equals(keyName))
+            if (dynamicList[i].globalId.Equals(keyName))
             {
-                return variables[i].state;
+                return dynamicList[i].state;
             }
         }
 
@@ -23,14 +25,19 @@ public class GlobalVariableList : ScriptableObject {
     {
         for (int i = 0; i < variables.Count; i++)
         {
-            if (variables[i].globalId.Equals(globalItemKey))
+            if (dynamicList[i].globalId.Equals(globalItemKey))
             {
-                variables[i].state = newState;
-                variables[i].numberData = newNumberData;
+                dynamicList[i].state = newState;
+                dynamicList[i].numberData = newNumberData;
                 return;
 
             }
         }
+    }
+
+    public void BuildDynamicList()
+    {
+        dynamicList = new List<GlobalVariableContainer>(variables.ToArray());
     }
 
 }

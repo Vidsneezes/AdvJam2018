@@ -5,8 +5,14 @@ using UnityEngine;
 public class ManagerBase : MonoBehaviour {
 
     public DialogueBoxManager dialogueBoxManager;
+
+    public PlayerController playerController;
     public GlobalVariableList globalKeyItems;
     public int currentItem = -1;
+
+    private void Awake()
+    {
+    }
 
     public bool ConditionMeets(string globalId, int desiredState)
     {

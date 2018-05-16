@@ -16,3 +16,5 @@ MonoBehaviour:
     state: 2
     numberData: 0
   globalVariableList: {fileID: 11400000, guid: dd02b5c80264ea949b507287cafffeb7, type: 2}
+  sceneTransport: 1
+  sceneToTransport: location_2_act_4

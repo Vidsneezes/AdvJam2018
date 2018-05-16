@@ -11,10 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: stranger_d_1
   m_EditorClassIdentifier: 
-  actorName: Stranger
   actorItemResponses: []
   defaultResponses:
-  - response:
-    - The moon is swell today
+  - dialogues: {fileID: 11400000, guid: 8cdee133f19e7f449874138ecd4ba545, type: 2}
     globalConditions: []
     callEvent: {fileID: 0}

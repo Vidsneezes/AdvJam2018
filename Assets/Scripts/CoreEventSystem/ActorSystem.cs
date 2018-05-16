@@ -39,10 +39,6 @@ public class ActorSystem : MonoBehaviour {
 
             RunDefaultDialogue(manageBase);
         }
-        else
-        {
-            RunResponseDialogue(manageBase.currentItem, manageBase);
-        }
 
     }
 
@@ -60,35 +56,11 @@ public class ActorSystem : MonoBehaviour {
         hasFocus = false;
     }
 
-    public void RunResponseDialogue(int responseId, ManagerBase manageBase)
-    {
-        if (currentResponse >= actorResponseSheet.actorItemResponses[responseId].response.Count)
-        {
-            hasFocus = false;
-
-            VirtualController.virtualController.inInteraction = false;
-            manageBase.dialogueBoxManager.CloseDialog();
-            currentResponse = 0;
-            Debug.Log("close box");
-            if(actorResponseSheet.actorItemResponses[responseId].callEvent != null)
-            {
-                actorResponseSheet.actorItemResponses[responseId].callEvent.RunEvent();
-            }
-            onDialogueDone.Invoke();
-            return;
-        }
-
-        manageBase.dialogueBoxManager.OpenDialog(actorResponseSheet.actorName, actorResponseSheet.actorItemResponses[responseId].response[currentResponse]);
-        VirtualController.virtualController.inInteraction = true;
-
-        currentResponse += 1;
-        VirtualController.virtualController.TriggerInteraction();
-        hasFocus = true;
-    }
-
     public void RunDefaultDialogue(ManagerBase manageBase)
     {
-        if (currentResponse >= actorResponseSheet.defaultResponses[currentBranch].response.Count)
+        manageBase.dialogueBoxManager.pressITo.gameObject.SetActive(true);
+
+        if (currentResponse >= actorResponseSheet.defaultResponses[currentBranch].dialogues.speechNode.Count)
         {
             hasFocus = false;
             VirtualController.virtualController.inInteraction = false;
@@ -102,13 +74,15 @@ public class ActorSystem : MonoBehaviour {
             Debug.Log("close box");
             currentBranch = -1;
             currentResponse = -1;
+            VirtualController.virtualController.onReTriggerable.RemoveListener(manageBase.dialogueBoxManager.ShowNextPrompt);
+
             return;
         }
 
-        manageBase.dialogueBoxManager.OpenDialog(actorResponseSheet.actorName, actorResponseSheet.defaultResponses[currentBranch].response[currentResponse]);
+        manageBase.dialogueBoxManager.OpenDialog(actorResponseSheet.defaultResponses[currentBranch].dialogues.speechNode[currentResponse].actorName, actorResponseSheet.defaultResponses[currentBranch].dialogues.speechNode[currentResponse].text);
         VirtualController.virtualController.inInteraction = true;
-
         currentResponse += 1;
+        VirtualController.virtualController.onReTriggerable.AddListener(manageBase.dialogueBoxManager.ShowNextPrompt);
         VirtualController.virtualController.TriggerInteraction();
         hasFocus = true;
     }

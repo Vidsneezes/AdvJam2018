@@ -11,11 +11,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: boss_d_4
   m_EditorClassIdentifier: 
-  actorName: Boss
-  actorItemResponses: []
   defaultResponses:
-  - response:
-    - What ya think this is? a merry go round, deliver pizza and bring the moni back
-      two things TWO THINGS!
+  - dialogues: {fileID: 11400000, guid: 4ac64fac043e54f4bba2f658b541ac81, type: 2}
+    globalConditions:
+    - globalId: 4_borker
+      state: 2
+      numberData: 0
+    - globalId: 4_cop
+      state: 2
+      numberData: 0
+    - globalId: 4_lady
+      state: 2
+      numberData: 0
+    - globalId: 4_minie
+      state: 0
+      numberData: 0
+    - globalId: 4_mayor
+      state: 2
+      numberData: 0
+    callEvent: {fileID: 11400000, guid: 96d2abef36666a740a0a8d60f3f5e0aa, type: 2}
+  - dialogues: {fileID: 11400000, guid: 28e12a3ea039b5c4080d782df58f9cd8, type: 2}
     globalConditions: []
     callEvent: {fileID: 0}

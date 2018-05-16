@@ -14,15 +14,13 @@ MonoBehaviour:
   actorName: Boss
   actorItemResponses: []
   defaultResponses:
-  - response:
-    - Ya late deliver this pizza
+  - dialogues: {fileID: 11400000, guid: bca4634c86af4f649aa7848f2d37347e, type: 2}
     globalConditions:
     - globalId: got_lady_pizza
       state: 0
       numberData: 0
     callEvent: {fileID: 11400000, guid: 42f6212aef35a0649b2977a0551809da, type: 2}
-  - response:
-    - Well go on then
+  - dialogues: {fileID: 11400000, guid: 30253d5de2303df43a468f1e41eb985c, type: 2}
     globalConditions:
     - globalId: got_lady_pizza
       state: 2

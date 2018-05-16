@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
+  m_Name: 1_Borker_Sally
+  m_EditorClassIdentifier: 
+  speechNode:
+  - actorName: Borker
+    text: Hiya Yous. Your late to work again huh. Your Boss is going to piledrive
+      a truck into your house if you deliver one of his pizzas late again.
+  - actorName: Yous
+    text: Hey, Yea I know! That's why i don't have time to chat. I have to get going.
+  - actorName: Borker
+    text: Wait! Have you seen Sally? I couldn't find her in the morning. I hope she
+      didn't go missing like the others.
+  - actorName: Yous
+    text: I haven't seen her.
+  - actorName: Borker
+    text: Ah well that's ok. If you see her let her know Borker is waiting at the
+      usual spot.
+  - actorName: Yous
+    text: Ok got it! I have to go.

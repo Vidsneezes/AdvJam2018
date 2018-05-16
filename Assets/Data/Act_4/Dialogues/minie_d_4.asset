@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
+  m_Name: minie_d_4
+  m_EditorClassIdentifier: 
+  defaultResponses:
+  - dialogues: {fileID: 11400000, guid: 8ab9cf123f937f142bb9664d4869d2ba, type: 2}
+    globalConditions:
+    - globalId: 4_minie
+      state: 2
+      numberData: 0
+    callEvent: {fileID: 0}
+  - dialogues: {fileID: 11400000, guid: 383c65ca7a477274398d9d73867249c4, type: 2}
+    globalConditions: []
+    callEvent: {fileID: 11400000, guid: f8fe30c900333bc429bc4628637bd92a, type: 2}

@@ -11,10 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: robbedEvent_d_1
   m_EditorClassIdentifier: 
-  actorName: Stranger
   actorItemResponses: []
   defaultResponses:
-  - response:
-    - Give me ya money
+  - dialogues: {fileID: 11400000, guid: 5eee7b5e5ffedc44684557b570e1b26a, type: 2}
     globalConditions: []
     callEvent: {fileID: 11400000, guid: 022070687d289b44aa8c0583b6b39b9e, type: 2}

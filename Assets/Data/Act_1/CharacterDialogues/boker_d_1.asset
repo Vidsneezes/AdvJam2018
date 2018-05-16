@@ -11,10 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: boker_d_1
   m_EditorClassIdentifier: 
-  actorName: Borker
   actorItemResponses: []
   defaultResponses:
-  - response:
-    - Well met
+  - dialogues: {fileID: 11400000, guid: 6d5483b3de22c29408ac6041cc65d957, type: 2}
     globalConditions: []
     callEvent: {fileID: 0}

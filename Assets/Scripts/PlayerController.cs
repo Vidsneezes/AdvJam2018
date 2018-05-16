@@ -17,20 +17,30 @@ public class PlayerController : MonoBehaviour {
     public Animator mainAnimator;
 
     public LayerMask groundMask;
+    public SpriteRenderer interactionIcon;
 
     public int inRoomTransition;
+    public AudioSource walking;
     private float smoothVel;
 
     private void Awake()
     {
+        walking.Play();
         inRoomTransition = 0;
         rbody2d = GetComponent<Rigidbody2D>();
         rbody2d.gravityScale = 0;
        // Application.targetFrameRate = 60;
     }
-   
-	// Update is called once per frame
-	void Update () {
+
+    private void Start()
+    {
+        ManagerBase mb = GameObject.FindObjectOfType<ManagerBase>();
+        mb.playerController = this;
+        interactionIcon.gameObject.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (VirtualController.virtualController.isRightPressed)
         {
             velocity.x = 1;
@@ -40,6 +50,9 @@ public class PlayerController : MonoBehaviour {
                 mainAnimator.SetBool("walking", true);
 
             }
+            if(!walking.isPlaying)
+                walking.Play();
+
         }
         else if (VirtualController.virtualController.isLeftPressed)
         {
@@ -49,6 +62,9 @@ public class PlayerController : MonoBehaviour {
             {
                 mainAnimator.SetBool("walking", true);
             }
+            if(!walking.isPlaying)
+                walking.Play();
+
         }
         else
         {
@@ -62,6 +78,7 @@ public class PlayerController : MonoBehaviour {
             {
                 velocity.x *= 0.89f;
             }
+            walking.Stop();
         }
 
         if(VirtualController.virtualController.wasSpacePressed && onGround)

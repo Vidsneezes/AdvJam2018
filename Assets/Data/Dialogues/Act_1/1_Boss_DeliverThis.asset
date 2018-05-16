@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
+  m_Name: 1_Boss_DeliverThis
+  m_EditorClassIdentifier: 
+  speechNode:
+  - actorName: Boss
+    text: Ya late again! This kid is going to drive my business side ways into a wall.
+  - actorName: Yous
+    text: 'Sorry! I didn''t over sleep. My alarm didn''t go off and I came as soon
+      as possible. '
+  - actorName: Boss
+    text: You left poor Minie alone! Had to sent him alone to pick up pizza "sauce".  You
+      know I can't let him go places by his onesums. He sticks out like fly in a bee
+      hive. Anyway, deliver this pizza to the culdesac. QUICKLY!
+  - actorName: Yous
+    text: Yes boss!
+  - actorName: ' '
+    text: Yous got a Pizza!

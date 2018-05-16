@@ -43,6 +43,13 @@ public class HelperMenu : MonoBehaviour {
         }
     }
 
+    [MenuItem("Level Editor/Build Variables")]
+    public static void BuildDynamicList()
+    {
+        GlobalVariableList globalsList = (GlobalVariableList)AssetDatabase.LoadAssetAtPath("Assets/Data/GlobalVariables.asset", typeof(GlobalVariableList));
+        globalsList.BuildDynamicList();
+    }
+
     public static void OnPlayStateChange(PlayModeStateChange playMode)
     {
         if(playMode == PlayModeStateChange.EnteredEditMode)

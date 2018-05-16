@@ -11,17 +11,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: lady_d_1
   m_EditorClassIdentifier: 
-  actorName: Lady
   actorItemResponses: []
   defaultResponses:
-  - response:
-    - You got my pizza how wonderfull
+  - dialogues: {fileID: 11400000, guid: be2dfcee76eb34946beb8680d67b395a, type: 2}
+    globalConditions:
+    - globalId: delivered_pizza
+      state: 2
+      numberData: 0
+    callEvent: {fileID: 0}
+  - dialogues: {fileID: 11400000, guid: 17b0462a09260e744b6fddf972d19181, type: 2}
     globalConditions:
     - globalId: got_lady_pizza
       state: 2
       numberData: 0
     callEvent: {fileID: 11400000, guid: 78362b2ce05c95f439eee441d3b8cee5, type: 2}
-  - response:
-    - What do you want?
+  - dialogues: {fileID: 11400000, guid: 30da42b21ce27d64d9d8a5dbb93cfe2a, type: 2}
     globalConditions: []
     callEvent: {fileID: 0}

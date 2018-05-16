@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
+  m_Name: 1_Stranger_Moon
+  m_EditorClassIdentifier: 
+  speechNode:
+  - actorName: Stranger With Mask
+    text: Hello young green thing. You live in a strange town.
+  - actorName: Yous
+    text: Green thing? My name is Yous. I never seen you before.
+  - actorName: Stranger With Mask
+    text: Yous you say. Well met. This town sure is strange. Since I been here alot
+      of people have gone missing. Gives everyone a little extra space to walk.
+  - actorName: Yous
+    text: Well that's a creepy thing to say. Are you the person behind the missing
+      people?
+  - actorName: Stranger With Mask
+    text: 'I wish. But no, I''m just a fellow moon watcher like yourself. '
+  - actorName: Yous
+    text: I don't... ah well I have to go.
+  - actorName: Stranger With Mask
+    text: See ya in a bit, wouldn't wanna be ya in a while.

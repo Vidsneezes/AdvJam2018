@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
+  m_Name: 1_Stranger_RobJob
+  m_EditorClassIdentifier: 
+  speechNode:
+  - actorName: Stranger With Mask
+    text: 'Hey there. '
+  - actorName: Yous
+    text: Um hello? Can you move I need gatta get back to the shop.
+  - actorName: Stranger With Mask
+    text: Sure Sure. Right after you give me that moni you just earned.
+  - actorName: Yous
+    text: Excuse me?
+  - actorName: Stranger With Mask
+    text: It's a Rob Job kid. A ROB JOB! Now give me that monies.
+  - actorName: ' '
+    text: Yous got Punched!
+  - actorName: ' '
+    text: Yous lost 10 Bucks!

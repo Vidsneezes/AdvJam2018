@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
+  m_Name: lady_d_4
+  m_EditorClassIdentifier: 
+  defaultResponses:
+  - dialogues: {fileID: 11400000, guid: 81f64bf8ea36af841aebaa239fab0d00, type: 2}
+    globalConditions:
+    - globalId: 4_lady
+      state: 2
+      numberData: 0
+    callEvent: {fileID: 0}
+  - dialogues: {fileID: 11400000, guid: efc73c6c8a6198e4faa3df2db1d211aa, type: 2}
+    globalConditions: []
+    callEvent: {fileID: 11400000, guid: 1849264a7c844ca4a9170554cc1a6e52, type: 2}

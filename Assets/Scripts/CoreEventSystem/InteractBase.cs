@@ -25,7 +25,12 @@ public class InteractBase : MonoBehaviour, Interactable {
 
     public void OnInteractionEnter()
     {
-        if(!hasCondition)
+        if (managerBase.playerController != null)
+        {
+            managerBase.playerController.interactionIcon.gameObject.SetActive(true);
+        }
+
+        if (!hasCondition)
         {
             onInteractEnter.Invoke();
 
@@ -36,10 +41,17 @@ public class InteractBase : MonoBehaviour, Interactable {
         {
             onInteractEnter.Invoke();
         }
+
+        
     }
 
     public void OnInteractionExit()
     {
+        if (managerBase.playerController != null)
+        {
+            managerBase.playerController.interactionIcon.gameObject.SetActive(false);
+        }
+
         if (!hasCondition)
         {
             onInteractExit.Invoke();
@@ -62,6 +74,11 @@ public class InteractBase : MonoBehaviour, Interactable {
         }
         if (hasCondition && managerBase.ConditionMeets(globalId, desiredState))
         {
+            if (managerBase.playerController != null)
+            {
+                managerBase.playerController.interactionIcon.gameObject.SetActive(true);
+            }
+
             onInteractActived.Invoke();
         }
     }

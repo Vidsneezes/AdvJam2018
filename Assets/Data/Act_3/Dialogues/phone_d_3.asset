@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
+  m_Name: phone_d_3
+  m_EditorClassIdentifier: 
+  defaultResponses:
+  - dialogues: {fileID: 11400000, guid: 558d24df96d4b5f4aa396dfd1b37fdc2, type: 2}
+    globalConditions:
+    - globalId: got_phone_code
+      state: 2
+      numberData: 0
+    callEvent: {fileID: 11400000, guid: 9f7fa6c2d18f361449d32d8d59b708fa, type: 2}
+  - dialogues: {fileID: 11400000, guid: 3f3ff1000e675b746b281457487ce97c, type: 2}
+    globalConditions: []
+    callEvent: {fileID: 0}

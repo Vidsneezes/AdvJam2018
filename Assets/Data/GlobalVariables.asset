@@ -19,7 +19,7 @@ MonoBehaviour:
     state: 0
     numberData: 0
   - globalId: playerspawnpoint
-    state: 2
+    state: 0
     numberData: 0
   - globalId: delivered_pizza
     state: 0
@@ -37,5 +37,66 @@ MonoBehaviour:
     state: 0
     numberData: 0
   - globalId: saved_town
+    state: 0
+    numberData: 0
+  - globalId: got_phone_code
+    state: 0
+    numberData: 0
+  - globalId: feng_solved
+    state: 0
+    numberData: 0
+  - globalId: 20bucks
+    state: 0
+    numberData: 0
+  - globalId: 4_borker
+    state: 0
+    numberData: 0
+  - globalId: 4_cop
+    state: 0
+    numberData: 0
+  - globalId: 4_lady
+    state: 0
+    numberData: 0
+  - globalId: 4_mayor
+    state: 0
+    numberData: 0
+  - globalId: 4_minie
+    state: 0
+    numberData: 0
+  dynamicList:
+  - globalId: act
+    state: 4
+    numberData: 0
+  - globalId: got_lady_pizza
+    state: 0
+    numberData: 0
+  - globalId: playerspawnpoint
+    state: 2
+    numberData: 0
+  - globalId: delivered_pizza
+    state: 2
+    numberData: 0
+  - globalId: encountered_manor
+    state: 0
+    numberData: 0
+  - globalId: got_manor_ticket
+    state: 0
+    numberData: 0
+  - globalId: got_manor_pizza
+    state: 0
+    numberData: 0
+  - globalId: phone_code
+    state: 0
+    numberData: 0
+  - globalId: saved_town
+    state: 0
+    numberData: 0
+  - globalId: got_phone_code
+    state: 0
+    numberData: 0
+  - globalId: feng_solved
+    state: 0
+    numberData: 0
+  - globalId: 20bucks
     state: 0
     numberData: 0

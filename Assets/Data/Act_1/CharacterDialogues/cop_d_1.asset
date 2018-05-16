@@ -9,19 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
-  m_Name: pigeonChef_d_2
+  m_Name: cop_d_1
   m_EditorClassIdentifier: 
-  actorName: Chef
   actorItemResponses: []
   defaultResponses:
-  - response:
-    - pee peee peeeep eeeepp
-    globalConditions:
-    - globalId: got_manor_ticket
-      state: 2
-      numberData: 0
-    callEvent: {fileID: 11400000, guid: c5775e30482511b4587ed55a70885e9c, type: 2}
-  - response:
-    - peee peee peeee peeee peeeee
+  - dialogues: {fileID: 11400000, guid: a133a86e677571c4bb8a6a44f13b0494, type: 2}
     globalConditions: []
     callEvent: {fileID: 0}

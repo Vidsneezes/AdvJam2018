@@ -153,6 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586431924a2d07a49af5045d68bb32a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oneShotData: {fileID: 11400000, guid: 837191cc72179964cb6cc7cbe48ef2e1, type: 2}
+  globalsList: {fileID: 11400000, guid: dd02b5c80264ea949b507287cafffeb7, type: 2}
   ps_prefab: {fileID: 114313345609377982, guid: 4ff2424225cad154daf9ca7b256b7ae3,
     type: 2}
