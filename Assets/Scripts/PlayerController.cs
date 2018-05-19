@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour {
         ManagerBase mb = GameObject.FindObjectOfType<ManagerBase>();
         mb.playerController = this;
         interactionIcon.gameObject.SetActive(false);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     // Update is called once per frame
@@ -50,9 +51,12 @@ public class PlayerController : MonoBehaviour {
                 mainAnimator.SetBool("walking", true);
 
             }
-            if(!walking.isPlaying)
+            walking.volume = Mathf.MoveTowards(walking.volume, 0.55f, Time.deltaTime);
+            if (!walking.isPlaying)
+            {
+                walking.volume = 0;
                 walking.Play();
-
+            }
         }
         else if (VirtualController.virtualController.isLeftPressed)
         {
@@ -62,9 +66,12 @@ public class PlayerController : MonoBehaviour {
             {
                 mainAnimator.SetBool("walking", true);
             }
-            if(!walking.isPlaying)
+            walking.volume = Mathf.MoveTowards(walking.volume, 0.55f, Time.deltaTime);
+            if (!walking.isPlaying)
+            {
+                walking.volume = 0;
                 walking.Play();
-
+            }
         }
         else
         {
@@ -78,7 +85,11 @@ public class PlayerController : MonoBehaviour {
             {
                 velocity.x *= 0.89f;
             }
-            walking.Stop();
+            walking.volume = Mathf.MoveTowards(walking.volume, 0f, Time.deltaTime * 2f);
+            if(walking.volume < 0.04f)
+            {
+                walking.Stop();
+            }
         }
 
         if(VirtualController.virtualController.wasSpacePressed && onGround)
@@ -96,6 +107,11 @@ public class PlayerController : MonoBehaviour {
         }else if(inRoomTransition == -1)
         {
             velocity.x = -1;
+        }
+
+        if(!onGround)
+        {
+            walking.Stop();
         }
 	}
 

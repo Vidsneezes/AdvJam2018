@@ -8,6 +8,7 @@ TagManager:
   - DialogueBox
   - PlayBase
   - InteractionIcon
+  - MusicPlayer
   layers:
   - Default
   - TransparentFX

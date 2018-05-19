@@ -11,4 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 4_Cop_MissingPeople
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Detective maybe
+    text: Be-care-ful Yous. I'm getting close to solving the mystery behind the missing
+      people
+  - actorName: Yous
+    text: Oh yeah? Who do you think is behind it all?
+  - actorName: Detective maybe
+    text: I can't say I might tip off the perpetrator if I say too much
+  - actorName: Yous
+    text: Right Right I get it keep up the good work I guess

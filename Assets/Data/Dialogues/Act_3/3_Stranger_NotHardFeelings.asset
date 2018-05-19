@@ -11,4 +11,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 3_Stranger_NotHardFeelings
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Yous
+    text: You! Give me my monies back!
+  - actorName: Stranger
+    text: Hi, um I don't have your monies
+  - actorName: Yous
+    text: I want my monies!
+  - actorName: Stranger
+    text: I don't have your monies!
+  - actorName: Yous
+    text: Give me my monies back!
+  - actorName: Stranger
+    text: Wait stop. There are bigger problems right now. We need to figure out where
+      we are!
+  - actorName: Yous
+    text: You jumped me and took my monies. Which isn't even mine but my BOSSS'!
+  - actorName: Stranger
+    text: We must work together to try and get out of here
+  - actorName: Yous
+    text: Um actually where are we exactly? I remember going inside a manor. Not this
+      train... train.. no subway station
+  - actorName: Stranger
+    text: I have no idea either. I jumped you good and was making my get away and
+      then like THAT I was here!
+  - actorName: Yous
+    text: I still need my monies back.
+  - actorName: Stranger
+    text: There are bigger problems than knowing who or who hasn't your monies. We
+      must put our rival past behind and work together!
+  - actorName: Yous
+    text: Rival past? You jumped me in the middle of the forest while yelling rob
+      job. And took my monies. Wait are you trying to get me fired?
+  - actorName: Stranger
+    text: If we both explore the platform, I'm sure we'll find a way back.
+  - actorName: Yous
+    text: I never said I was going to help you
+  - actorName: Stranger
+    text: Right! Help. We just have to wait for the next fill subway train to get
+      here and ask some one where we are.
+  - actorName: Yous
+    text: I'm not going to help.
+  - actorName: Stranger
+    text: Good idea it's better if we split up, widen the search area. You'll let
+      me know if you find something right?
+  - actorName: Yous
+    text: -.-

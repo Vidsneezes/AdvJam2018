@@ -11,4 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 4_Borker_Sauce
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Yous
+    text: It kinda looks like Minie's mystery sauce, the more I look at it

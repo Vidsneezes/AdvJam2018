@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: pigeonCop_d_2
   m_EditorClassIdentifier: 
+  talkEffect: {fileID: 8300000, guid: a601d30e9228ddd459906061943c0c1e, type: 3}
   defaultResponses:
   - dialogues: {fileID: 11400000, guid: bc6dd8c8fd7bec1458e65bf3674759bd, type: 2}
     globalConditions: []

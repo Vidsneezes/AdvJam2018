@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="ActorResponseSheet",menuName ="Dialogue/ActorResponseSheet")]
 public class ActorResponseSheet : ScriptableObject {
 
+    public AudioClip talkEffect;
     public List<ActorResponseContainer> defaultResponses;
 }
 

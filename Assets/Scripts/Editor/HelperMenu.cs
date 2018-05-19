@@ -59,7 +59,7 @@ public class HelperMenu : MonoBehaviour {
         }else if(playMode == PlayModeStateChange.ExitingEditMode)
         {
             string currentScene = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().path;
-            if (!currentScene.Contains("StartScene"))
+            if (!currentScene.Contains("StartScene") && ! currentScene.Contains("Title"))
             {
                 GlobalVariableList globalsList = (GlobalVariableList)AssetDatabase.LoadAssetAtPath("Assets/Data/GlobalVariables.asset", typeof(GlobalVariableList));
                 globalsList.SetGlobalVariable("playerspawnpoint", 0, 0);

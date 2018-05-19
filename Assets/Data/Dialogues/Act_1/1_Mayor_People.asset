@@ -13,4 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechNode:
   - actorName: Mayor
-    text: I'm Minie. I got pizza "sauce" all over my clothings.
+    text: Strange times we live in. In my day never have such disssapearings occured.
+      Makes my want to quish back into my wrapper out of fear.
+  - actorName: Yous
+    text: Aren't you the mayor? Shouldn't you be trying to figure out whats happening?
+  - actorName: Mayor
+    text: Area you going to pay me to find out? Lad the world doesn't turn for free.
+  - actorName: Yous
+    text: ok.

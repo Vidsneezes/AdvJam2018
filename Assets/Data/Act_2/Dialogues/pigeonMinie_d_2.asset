@@ -11,7 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: pigeonMinie_d_2
   m_EditorClassIdentifier: 
+  talkEffect: {fileID: 8300000, guid: a601d30e9228ddd459906061943c0c1e, type: 3}
   defaultResponses:
+  - dialogues: {fileID: 11400000, guid: 5a23c692d27c28e498a55434be621e18, type: 2}
+    globalConditions:
+    - globalId: got_manor_pizza
+      state: 2
+      numberData: 0
+    callEvent: {fileID: 0}
   - dialogues: {fileID: 11400000, guid: d8aeeccae87eaa345bec307387b1b162, type: 2}
     globalConditions:
     - globalId: encountered_manor

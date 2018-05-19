@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: stranger_d_1
   m_EditorClassIdentifier: 
-  actorItemResponses: []
+  talkEffect: {fileID: 8300000, guid: 0de8a61e53661934f8182991002d7e21, type: 3}
   defaultResponses:
   - dialogues: {fileID: 11400000, guid: 8cdee133f19e7f449874138ecd4ba545, type: 2}
     globalConditions: []

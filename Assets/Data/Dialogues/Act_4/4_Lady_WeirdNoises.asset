@@ -11,4 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 4_Lady_WeirdNoises
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Yous
+    text: You seem on alert
+  - actorName: Lady
+    text: I have to! The las few weeks I been hearing moans and grunts cmoing from
+      the forest at night
+  - actorName: Yous
+    text: You think its a wild animal?
+  - actorName: 'Lady '
+    text: No it sounds more human kind
+  - actorName: Yous
+    text: That's strange

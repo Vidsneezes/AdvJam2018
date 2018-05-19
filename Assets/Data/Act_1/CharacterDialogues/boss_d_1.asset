@@ -11,8 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: boss_d_1
   m_EditorClassIdentifier: 
-  actorName: Boss
-  actorItemResponses: []
+  talkEffect: {fileID: 8300000, guid: 1940b05591550894ba5ed4cb79aa04ae, type: 3}
   defaultResponses:
   - dialogues: {fileID: 11400000, guid: bca4634c86af4f649aa7848f2d37347e, type: 2}
     globalConditions:

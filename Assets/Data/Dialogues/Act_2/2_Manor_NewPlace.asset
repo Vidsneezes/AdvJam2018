@@ -11,4 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 2_Manor_NewPlace
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Yous
+    text: I don't remember this place being here before. It has a very out of this
+      world vibe to it.

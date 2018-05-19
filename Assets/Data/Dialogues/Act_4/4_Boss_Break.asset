@@ -11,4 +11,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 4_Boss_Break
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Yous
+    text: Ah your back, welcome back. Where did the pigeon go?
+  - actorName: Boss
+    text: Don't welcome back me I saw you take a pizza out. Where is it?
+  - actorName: 'Yous '
+    text: Oh crap I must have left it at the subway station!
+  - actorName: 'Boss '
+    text: What? Fine atleast give me the money from the last delivery.
+  - actorName: Yous
+    text: Well you see I got jumped and they took the money
+  - actorName: Boss
+    text: Jumped? In this town? Don't lie. This is one of the most pacifist towns
+      around. You know what waterever. Go on take your break.
+  - actorName: 'Yous '
+    text: Ah ok. I'll go hang out with Borker
+  - actorName: Boss
+    text: Erm yea sure waterever just go.

@@ -18,7 +18,7 @@ public class MusicPlayer : MonoBehaviour {
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        musicPlayer.volume = 0.65f;
+        musicPlayer.volume =0.95f;
     }
 
     // Use this for initialization
@@ -68,6 +68,8 @@ public class MusicPlayer : MonoBehaviour {
     {
         if (musicPlayer.isPlaying && musicPlayer.clip != jamsFull)
         {
+            musicPlayer.volume = 0.55f;
+            Debug.Log("dd");
             musicPlayer.Stop();
             musicPlayer.clip = jamsFull;
             musicPlayer.Play();

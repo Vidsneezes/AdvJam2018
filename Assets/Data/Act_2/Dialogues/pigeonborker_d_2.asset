@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: pigeonborker_d_2
   m_EditorClassIdentifier: 
+  talkEffect: {fileID: 8300000, guid: a601d30e9228ddd459906061943c0c1e, type: 3}
   defaultResponses:
   - dialogues: {fileID: 11400000, guid: 1bc20a816de18d4479e8638de82a405a, type: 2}
     globalConditions: []

@@ -11,4 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 4_Cop_StrangeThings
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: 'Detective maybe '
+    text: Over the last few weeks almost right after the disappearings began. We began
+      to recieve reports of a large shadowdy giant going through people's trash
+  - actorName: Yous
+    text: A giant you say. I wonder who it might be

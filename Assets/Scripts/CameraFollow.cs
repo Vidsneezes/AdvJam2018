@@ -82,9 +82,9 @@ public class CameraFollow : MonoBehaviour {
             currentPosition.x = locationMeta.worldRect.x + locationMeta.worldRect.width - cameraBounds.x * 0.5f;
         }
 
-        if(currentPosition.y < myCamera.orthographicSize)
+        if (currentPosition.y < 8)
         {
-            currentPosition.y = myCamera.orthographicSize;
+            currentPosition.y = 8;
         }
 
         transform.position = Vector3.SmoothDamp(transform.position, currentPosition, ref vel, smoothDamp);

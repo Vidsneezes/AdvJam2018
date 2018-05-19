@@ -31,17 +31,17 @@ public class LocationMeta : MonoBehaviour {
             Vector3 newPlayrPos = new Vector3(0, playerController.transform.position.y, playerController.transform.position.z);
             if(playerController.inRoomTransition == -1)
             {
-                newPlayrPos.x = worldRect.x + worldRect.width - 0.5f;
+                newPlayrPos.x = worldRect.x + worldRect.width - 1.5f;
 
             }else if(playerController.inRoomTransition == 1)
             {
-                newPlayrPos.x = worldRect.x + 0.5f;
+                newPlayrPos.x = worldRect.x + 1.5f;
             }
 
             playerController.transform.position = newPlayrPos;
             playerController.inRoomTransition = 0;
             newPlayrPos.z = -10;
-            newPlayrPos.y = Camera.main.orthographicSize;
+            newPlayrPos.y = 8;
             if (playerController.inRoomTransition == -1)
             {
                 newPlayrPos.x = worldRect.x + worldRect.width + cameraFollow.cameraBounds.x;
@@ -54,7 +54,10 @@ public class LocationMeta : MonoBehaviour {
 
             cameraFollow.transform.position = newPlayrPos;
         }
-
+        mainDisplay.sortingOrder = -500;
+#if !UNITY_EDITOR
+        mainDisplay.gameObject.SetActive(false);
+#endif
     }
 
     private void Update()
@@ -63,7 +66,7 @@ public class LocationMeta : MonoBehaviour {
         int nextLocation = 1;
 
 
-        if (playerController.transform.position.x < worldRect.x - 0.55f)
+        if (playerController.transform.position.x < worldRect.x + 0.5f)
         {
             int currentAct = globals.GetVariableState("act");
             playerController.inRoomTransition = -1;
@@ -83,7 +86,7 @@ public class LocationMeta : MonoBehaviour {
 
             UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
 
-        }else if(playerController.transform.position.x > worldRect.x + worldRect.width + 0.55f)
+        }else if(playerController.transform.position.x > worldRect.x + worldRect.width - 0.5f)
         {
             int currentAct = globals.GetVariableState("act");
 

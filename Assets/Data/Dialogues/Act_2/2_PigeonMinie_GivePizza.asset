@@ -11,4 +11,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 2_PigeonMinie_GivePizza
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: 'Yous '
+    text: I'm going to need a Za minie pigeon. Make it snappy.
+  - actorName: Pigeon
+    text: Mi
+  - actorName: Yous
+    text: 'What specialty? Make a full supreme pizza, cooked in open oven with cheese
+      in the crust. '
+  - actorName: Pigeon
+    text: Me
+  - actorName: Yous
+    text: Mhm.
+  - actorName: 
+    text: You got Ultra Pizza!
+  - actorName: Yous
+    text: 'I wonder who taught this pigeon to make Ultra Pizza. '

@@ -7,6 +7,8 @@ public class ActorSystem : MonoBehaviour {
 
     public ActorResponseSheet actorResponseSheet;
     public UnityEvent onDialogueDone;
+    [HideInInspector]
+    public AudioSource effectsSounds;
     private int currentResponse;
     private int currentBranch;
     private bool hasFocus;
@@ -16,6 +18,17 @@ public class ActorSystem : MonoBehaviour {
         currentBranch = -1;
         hasFocus = false;
         currentResponse = -1;
+      
+    }
+
+    private void Start()
+    {
+        GameObject audioPlayer = new GameObject("Effects");
+        effectsSounds = audioPlayer.AddComponent<AudioSource>();
+        effectsSounds.loop = false;
+        effectsSounds.playOnAwake = false;
+        effectsSounds.volume = 0.6f;
+        effectsSounds.transform.SetParent(transform);
     }
 
     public void DecideDialogue()
@@ -44,6 +57,7 @@ public class ActorSystem : MonoBehaviour {
 
     public void RunDialogue()
     {
+    
         Debug.Log(name + "Has Focus");
         currentResponse = 0;
         hasFocus = true;
@@ -58,6 +72,11 @@ public class ActorSystem : MonoBehaviour {
 
     public void RunDefaultDialogue(ManagerBase manageBase)
     {
+        if(currentResponse == 0)
+        {
+            effectsSounds.clip = actorResponseSheet.talkEffect;
+            effectsSounds.Play();
+        }
         manageBase.dialogueBoxManager.pressITo.gameObject.SetActive(true);
 
         if (currentResponse >= actorResponseSheet.defaultResponses[currentBranch].dialogues.speechNode.Count)

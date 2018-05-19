@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: phone_d_3
   m_EditorClassIdentifier: 
+  talkEffect: {fileID: 8300000, guid: b9681d342e692de47947ab90edcba7c3, type: 3}
   defaultResponses:
   - dialogues: {fileID: 11400000, guid: 558d24df96d4b5f4aa396dfd1b37fdc2, type: 2}
     globalConditions:

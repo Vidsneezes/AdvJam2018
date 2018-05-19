@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: boss_d_4
   m_EditorClassIdentifier: 
+  talkEffect: {fileID: 8300000, guid: 1940b05591550894ba5ed4cb79aa04ae, type: 3}
   defaultResponses:
   - dialogues: {fileID: 11400000, guid: 4ac64fac043e54f4bba2f658b541ac81, type: 2}
     globalConditions:
@@ -24,7 +25,7 @@ MonoBehaviour:
       state: 2
       numberData: 0
     - globalId: 4_minie
-      state: 0
+      state: 2
       numberData: 0
     - globalId: 4_mayor
       state: 2

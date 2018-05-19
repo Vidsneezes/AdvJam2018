@@ -11,4 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 2_PigeonBoss_GetPizzaFromM
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Yous
+    text: Hey Boss. HE HE. I'm taking a pizza out to the manor. They didn't order
+      it or anything. Just want an excuse to go inside.
+  - actorName: Pigeon
+    text: PEEE PEEE PIIIII
+  - actorName: Yous
+    text: Whoa. Are you yelling? The counter really brings out the bossy side of people,
+      erm I mean pigeons.

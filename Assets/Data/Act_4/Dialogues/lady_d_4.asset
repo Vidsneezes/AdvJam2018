@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b26736fdbc597b458a22881e2febec3, type: 3}
   m_Name: lady_d_4
   m_EditorClassIdentifier: 
+  talkEffect: {fileID: 8300000, guid: 4398b594b2bfb2049bac05bfe7f00023, type: 3}
   defaultResponses:
   - dialogues: {fileID: 11400000, guid: 81f64bf8ea36af841aebaa239fab0d00, type: 2}
     globalConditions:

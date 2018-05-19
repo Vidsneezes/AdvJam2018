@@ -11,4 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 4_Boss_HaveASlice
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Yous
+    text: Ok I'm ready to get back to work!
+  - actorName: Boss
+    text: Sure thing but first have a nice slice of pizza.  This one tastes like friendship.
+  - actorName: Yous
+    text: Thanks Boss. Ammmmmmm

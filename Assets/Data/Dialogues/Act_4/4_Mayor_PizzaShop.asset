@@ -11,4 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 4_Mayor_PizzaShop
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Mayor
+    text: I think I might need a new wrapper soon
+  - actorName: Yous
+    text: Aren't those wrappers really expensive?
+  - actorName: Mayor
+    text: They are lad. But our town can afford it now.
+  - actorName: Yous
+    text: Why?
+  - actorName: Mayor
+    text: The Pizza Shop lad, ever since it came to town there have be more resources
+      per individual every week
+  - actorName: Yous
+    text: I'm glad to hear that.

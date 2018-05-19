@@ -11,4 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b2adf03d0ddc54192c477a12a80bcd, type: 3}
   m_Name: 2_PigeonBoss_ImaPigeon
   m_EditorClassIdentifier: 
-  speechNode: []
+  speechNode:
+  - actorName: Yous
+    text: Are you pretending to be the Boss little fella.
+  - actorName: Pigeon
+    text: pi pi pi pi pe pe pe
+  - actorName: Yous
+    text: Sure sure. You can be the boss. Mhm I wonder where the real Boss went. I
+      don't think I ever seen him away from the counter before.
