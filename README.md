@@ -15,36 +15,36 @@ Create Dialogue/DialogueData
   A DialogueData is used to store basic text branches, it has a speech node list. 
   Here you place dialogue text like so
   
-  1
-    MeetBoss.dialoguedata
-    Node 1
-      actor name : boss
-      text : hello
-    Node 2
-      actor name : Billy
-      text : Good morning
-  2
-    MeetBoss2.dialoguedata
-    Node 1
-      actor name : boss
-      text : get to work!
+    1
+      MeetBoss.dialoguedata
+      Node 1
+        actor name : boss
+        text : hello
+      Node 2
+        actor name : Billy
+        text : Good morning
+    2
+      MeetBoss2.dialoguedata
+      Node 1
+        actor name : boss
+        text : get to work!
 
 Step 2: 
 Create Dialogue/ActorResponseSheet
    A ActorResponseSheet is used to build the player interaction, it has a default response list.
    Which basically store a dialoguedata, global variable condition checks, and an event.
    
-   Example
-   Boss_Scene_1.actorresponsesheet
-    default responses:
-      2
-      dialogue: MeetBoss2.dialoguedata
-      globalconditions: talkedtoboss -> 1
-      event : none
-      1
-      dialogue: MeetBoss.dialoguedata
-      globalconditions: none
-      event : TalkedToBoss.keyitemchangeevent
+     Example
+     Boss_Scene_1.actorresponsesheet
+      default responses:
+        2
+        dialogue: MeetBoss2.dialoguedata
+        globalconditions: talkedtoboss -> 1
+        event : none
+        1
+        dialogue: MeetBoss.dialoguedata
+        globalconditions: none
+        event : TalkedToBoss.keyitemchangeevent
     
  Step 3:
  Create KeyItemChangeEvent
