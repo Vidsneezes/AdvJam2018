@@ -73,3 +73,7 @@ Level Editor -> Build Variables.
 
 
 This was made over the course of 2 weeks, while I was also designing, creating art and music.
+
+Contact 
+Website : [Vidsneezes](vidsneezes.wordpress.com)
+Twitter : [@Moraleszez](https://twitter.com/Moraleszez)
