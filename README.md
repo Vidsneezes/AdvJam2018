@@ -2,6 +2,8 @@
 Adventure Jam 2018 is over, you can get the source code here!
 
 ![alt text](https://i.imgur.com/S3sKakz.png)
+Link to playable game.
+https://gamejolt.com/games/theitism/339989
 
 All the code was made from scratch, with a couple snippets I borrow from preivous prototype projects.
 
