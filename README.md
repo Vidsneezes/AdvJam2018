@@ -7,6 +7,7 @@ Link to playable game.
 https://gamejolt.com/games/theitism/339989
 
 All the code was made from scratch, with a couple snippets I borrow from preivous prototype projects.
+## you probably need to remove the .vs and make your own if you want to edit scripts ##
 
 The game is a platformer with an adventure game touch.
 
