@@ -14,6 +14,8 @@ Step 1:
 Create Dialogue/DialogueData
   A DialogueData is used to store basic text branches, it has a speech node list. 
   Here you place dialogue text like so
+  
+  1
     MeetBoss.dialoguedata
     Node 1
       actor name : boss
@@ -21,18 +23,39 @@ Create Dialogue/DialogueData
     Node 2
       actor name : Billy
       text : Good morning
+  2
+    MeetBoss2.dialoguedata
+    Node 1
+      actor name : boss
+      text : get to work!
 
 Step 2: 
 Create Dialogue/ActorResponseSheet
    A ActorResponseSheet is used to build the player interaction, it has a default response list.
    Which basically store a dialoguedata, global variable condition checks, and an event.
+   
    Example
    Boss_Scene_1.actorresponsesheet
     default responses:
+      2
+      dialogue: MeetBoss2.dialoguedata
+      globalconditions: talkedtoboss -> 1
+      event : none
+      1
       dialogue: MeetBoss.dialoguedata
       globalconditions: none
-      event : none
+      event : TalkedToBoss.keyitemchangeevent
     
+ Step 3:
+ Create KeyItemChangeEvent
+    A keyitemchangeevent are used to change global variables and/or to transport to new scenes. Multiple global vars can be changed at once via the Global Vars to Change list
+    
+    Example
+    TalkedToBoss.keyitemchangeevent
+      GlobalVarsToChange:
+        talkedtoboss = 1
+      scene transport = false
+      scene to transport = none
 
 Events are used to change global variables and move the game along. 
 
